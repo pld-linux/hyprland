@@ -7,6 +7,7 @@ Group:		Applications
 #Source0Download: https://github.com/hyprwm/hyprland/releases
 Source0:	https://github.com/hyprwm/hyprland/releases/download/v%{version}/source-v%{version}.tar.gz
 # Source0-md5:	8cb78f78407f12a72ed710a19116abae
+Patch0:		flags.patch
 URL:		https://hyprland.org/
 BuildRequires:	Mesa-libgbm-devel
 BuildRequires:	OpenGLESv3-devel
@@ -78,6 +79,7 @@ Header files for hyprland.
 
 %prep
 %setup -q -n %{name}-source
+%patch0 -p1
 
 %build
 %cmake -B build
