@@ -1,12 +1,12 @@
 Summary:	Independent, highly customizable, dynamic tiling Wayland compositor
 Name:		hyprland
-Version:	0.41.2
+Version:	0.42.0
 Release:	1
 License:	BSD
 Group:		Applications
 #Source0Download: https://github.com/hyprwm/hyprland/releases
 Source0:	https://github.com/hyprwm/hyprland/releases/download/v%{version}/source-v%{version}.tar.gz
-# Source0-md5:	8cb78f78407f12a72ed710a19116abae
+# Source0-md5:	66f2985365ae8b1163ae3e7a99d6fa83
 Patch0:		flags.patch
 URL:		https://hyprland.org/
 BuildRequires:	Mesa-libgbm-devel
@@ -14,9 +14,10 @@ BuildRequires:	OpenGLESv3-devel
 BuildRequires:	cairo-devel
 BuildRequires:	cmake >= 3.27
 BuildRequires:	hwdata
+BuildRequires:	hypr-aquamarine-devel
 BuildRequires:	hyprcursor-devel >= 0.1.7
 BuildRequires:	hyprlang-devel >= 0.3.2
-BuildRequires:	hyprutils-devel >= 0.1.5
+BuildRequires:	hyprutils-devel >= 0.2.1
 BuildRequires:	hyprwayland-scanner >= 0.3.10
 BuildRequires:	libdisplay-info-devel
 BuildRequires:	libdrm-devel
@@ -38,11 +39,12 @@ BuildRequires:	wayland-protocols
 BuildRequires:	xcb-util-devel
 BuildRequires:	xcb-util-errors-devel
 BuildRequires:	xcb-util-wm-devel
+BuildRequires:	xorg-lib-libXcursor-devel
 BuildRequires:	xorg-lib-libxkbcommon-devel
 BuildRequires:	xorg-xserver-Xwayland-devel
 Requires:	hyprcursor >= 0.1.7
 Requires:	hyprlang >= 0.3.2
-Requires:	hyprutils >= 0.1.5
+Requires:	hyprutils >= 0.2.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -101,7 +103,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/Hyprland
 %attr(755,root,root) %{_bindir}/hyprctl
 %attr(755,root,root) %{_bindir}/hyprpm
-%{_datadir}/hyprland
+%{_datadir}/hypr
 %{_datadir}/wayland-sessions/hyprland.desktop
 %{_datadir}/xdg-desktop-portal/hyprland-portals.conf
 %{_mandir}/man1/Hyprland.1*
