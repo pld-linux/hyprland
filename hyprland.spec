@@ -1,30 +1,27 @@
 Summary:	Independent, highly customizable, dynamic tiling Wayland compositor
 Name:		hyprland
-Version:	0.42.0
+Version:	0.43.0
 Release:	1
 License:	BSD
 Group:		Applications
 #Source0Download: https://github.com/hyprwm/hyprland/releases
 Source0:	https://github.com/hyprwm/hyprland/releases/download/v%{version}/source-v%{version}.tar.gz
-# Source0-md5:	66f2985365ae8b1163ae3e7a99d6fa83
+# Source0-md5:	e9fcd1e7e8af5b15ec41c38b69969671
 Patch0:		flags.patch
 URL:		https://hyprland.org/
 BuildRequires:	Mesa-libgbm-devel
 BuildRequires:	OpenGLESv3-devel
 BuildRequires:	cairo-devel
-BuildRequires:	cmake >= 3.27
-BuildRequires:	hwdata
+BuildRequires:	cmake >= 3.30
+BuildRequires:	glib2 >= 2.0
 BuildRequires:	hypr-aquamarine-devel
 BuildRequires:	hyprcursor-devel >= 0.1.7
 BuildRequires:	hyprlang-devel >= 0.3.2
 BuildRequires:	hyprutils-devel >= 0.2.1
 BuildRequires:	hyprwayland-scanner >= 0.3.10
-BuildRequires:	libdisplay-info-devel
 BuildRequires:	libdrm-devel
 BuildRequires:	libinput-devel
-BuildRequires:	libliftoff-devel
-BuildRequires:	libseat-devel
-BuildRequires:	libstdc++-devel
+BuildRequires:	libstdc++-devel >= 6:14
 BuildRequires:	libuuid-devel
 BuildRequires:	libxcb-devel
 BuildRequires:	meson
@@ -34,7 +31,6 @@ BuildRequires:	pixman-devel
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.605
 BuildRequires:	tomlplusplus-devel
-BuildRequires:	udev-devel
 BuildRequires:	wayland-devel
 BuildRequires:	wayland-protocols
 BuildRequires:	xcb-util-devel
@@ -42,7 +38,6 @@ BuildRequires:	xcb-util-errors-devel
 BuildRequires:	xcb-util-wm-devel
 BuildRequires:	xorg-lib-libXcursor-devel
 BuildRequires:	xorg-lib-libxkbcommon-devel
-BuildRequires:	xorg-xserver-Xwayland-devel
 Requires:	hyprcursor >= 0.1.7
 Requires:	hyprlang >= 0.3.2
 Requires:	hyprutils >= 0.2.1
@@ -103,6 +98,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc LICENSE README.md
 %attr(755,root,root) %{_bindir}/Hyprland
 %attr(755,root,root) %{_bindir}/hyprctl
+%attr(755,root,root) %{_bindir}/hyprland
 %attr(755,root,root) %{_bindir}/hyprpm
 %{_datadir}/hypr
 %{_datadir}/wayland-sessions/hyprland.desktop
