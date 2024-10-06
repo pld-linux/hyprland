@@ -9,7 +9,9 @@ Source0:	https://github.com/hyprwm/hyprland/releases/download/v%{version}/source
 # Source0-md5:	e9fcd1e7e8af5b15ec41c38b69969671
 Patch0:		flags.patch
 URL:		https://hyprland.org/
+BuildRequires:	EGL-devel
 BuildRequires:	Mesa-libgbm-devel
+BuildRequires:	OpenGL-devel
 BuildRequires:	OpenGLESv3-devel
 BuildRequires:	cairo-devel
 BuildRequires:	cmake >= 3.30
