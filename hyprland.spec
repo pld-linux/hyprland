@@ -1,12 +1,12 @@
 Summary:	Independent, highly customizable, dynamic tiling Wayland compositor
 Name:		hyprland
-Version:	0.43.0
+Version:	0.44.0
 Release:	1
 License:	BSD
 Group:		Applications
 #Source0Download: https://github.com/hyprwm/hyprland/releases
 Source0:	https://github.com/hyprwm/hyprland/releases/download/v%{version}/source-v%{version}.tar.gz
-# Source0-md5:	e9fcd1e7e8af5b15ec41c38b69969671
+# Source0-md5:	1c768b525be47c394ba9f8eecb6cddcf
 Patch0:		flags.patch
 URL:		https://hyprland.org/
 BuildRequires:	EGL-devel
@@ -18,8 +18,9 @@ BuildRequires:	cmake >= 3.30
 BuildRequires:	glib2 >= 2.0
 BuildRequires:	hypr-aquamarine-devel
 BuildRequires:	hyprcursor-devel >= 0.1.7
+BuildRequires:	hyprland-protocols >= 0.2.0
 BuildRequires:	hyprlang-devel >= 0.3.2
-BuildRequires:	hyprutils-devel >= 0.2.1
+BuildRequires:	hyprutils-devel >= 0.2.3
 BuildRequires:	hyprwayland-scanner >= 0.3.10
 BuildRequires:	libdrm-devel
 BuildRequires:	libinput-devel
@@ -33,7 +34,7 @@ BuildRequires:	pixman-devel
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.605
 BuildRequires:	tomlplusplus-devel
-BuildRequires:	wayland-devel
+BuildRequires:	wayland-devel >= 1.22.90
 BuildRequires:	wayland-protocols
 BuildRequires:	xcb-util-devel
 BuildRequires:	xcb-util-errors-devel
@@ -42,7 +43,8 @@ BuildRequires:	xorg-lib-libXcursor-devel
 BuildRequires:	xorg-lib-libxkbcommon-devel
 Requires:	hyprcursor >= 0.1.7
 Requires:	hyprlang >= 0.3.2
-Requires:	hyprutils >= 0.2.1
+Requires:	hyprutils >= 0.2.3
+Requires:	wayland >= 1.22.90
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
