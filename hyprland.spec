@@ -1,12 +1,12 @@
 Summary:	Independent, highly customizable, dynamic tiling Wayland compositor
 Name:		hyprland
-Version:	0.44.1
+Version:	0.45.0
 Release:	1
 License:	BSD
 Group:		Applications
 #Source0Download: https://github.com/hyprwm/hyprland/releases
 Source0:	https://github.com/hyprwm/hyprland/releases/download/v%{version}/source-v%{version}.tar.gz
-# Source0-md5:	ae74cd3ace7a9d03a7993b532ecc411b
+# Source0-md5:	242d3f8808d625efda88da34549b7332
 Patch0:		flags.patch
 URL:		https://hyprland.org/
 BuildRequires:	EGL-devel
@@ -16,9 +16,9 @@ BuildRequires:	OpenGLESv3-devel
 BuildRequires:	cairo-devel
 BuildRequires:	cmake >= 3.30
 BuildRequires:	glib2 >= 2.0
-BuildRequires:	hypr-aquamarine-devel
+BuildRequires:	hypr-aquamarine-devel >= 0.4.2
 BuildRequires:	hyprcursor-devel >= 0.1.7
-BuildRequires:	hyprland-protocols >= 0.2.0
+BuildRequires:	hyprland-protocols >= 0.4.0
 BuildRequires:	hyprlang-devel >= 0.3.2
 BuildRequires:	hyprutils-devel >= 0.2.3
 BuildRequires:	hyprwayland-scanner >= 0.3.10
@@ -41,6 +41,7 @@ BuildRequires:	xcb-util-errors-devel
 BuildRequires:	xcb-util-wm-devel
 BuildRequires:	xorg-lib-libXcursor-devel
 BuildRequires:	xorg-lib-libxkbcommon-devel
+Requires:	hypr-aquamarine >= 0.4.2
 Requires:	hyprcursor >= 0.1.7
 Requires:	hyprlang >= 0.3.2
 Requires:	hyprutils >= 0.2.3
