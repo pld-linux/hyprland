@@ -1,12 +1,12 @@
 Summary:	Independent, highly customizable, dynamic tiling Wayland compositor
 Name:		hyprland
-Version:	0.46.2
-Release:	2
+Version:	0.47.0
+Release:	1
 License:	BSD
 Group:		Applications
 #Source0Download: https://github.com/hyprwm/hyprland/releases
 Source0:	https://github.com/hyprwm/hyprland/releases/download/v%{version}/source-v%{version}.tar.gz
-# Source0-md5:	0331c31d54a59f9d849d35f5aab023a8
+# Source0-md5:	f02d018805b1c24fbdf9b67c46b48e6c
 Patch0:		flags.patch
 URL:		https://hyprland.org/
 BuildRequires:	EGL-devel
@@ -15,13 +15,14 @@ BuildRequires:	OpenGL-devel
 BuildRequires:	OpenGLESv3-devel
 BuildRequires:	cairo-devel
 BuildRequires:	cmake >= 3.30
+BuildRequires:	glaze-devel >= 4.2.3
 BuildRequires:	glib2 >= 2.0
 BuildRequires:	hypr-aquamarine-devel >= 0.4.5
 BuildRequires:	hyprcursor-devel >= 0.1.7
 BuildRequires:	hyprgraphics-devel >= 0.1.1
-BuildRequires:	hyprland-protocols >= 0.4.0
+BuildRequires:	hyprland-protocols >= 0.6.0
 BuildRequires:	hyprlang-devel >= 0.3.2
-BuildRequires:	hyprutils-devel >= 0.2.4
+BuildRequires:	hyprutils-devel >= 0.4.0
 BuildRequires:	hyprwayland-scanner >= 0.3.10
 BuildRequires:	libdrm-devel
 BuildRequires:	libinput-devel
@@ -47,7 +48,7 @@ Requires:	hypr-aquamarine >= 0.4.5
 Requires:	hyprcursor >= 0.1.7
 Requires:	hyprgraphics >= 0.1.1
 Requires:	hyprlang >= 0.3.2
-Requires:	hyprutils >= 0.2.4
+Requires:	hyprutils >= 0.4.0
 Requires:	wayland >= 1.22.90
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
