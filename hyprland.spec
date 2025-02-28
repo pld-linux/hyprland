@@ -50,6 +50,7 @@ Requires:	hyprgraphics >= 0.1.1
 Requires:	hyprlang >= 0.3.2
 Requires:	hyprutils >= 0.4.0
 Requires:	wayland >= 1.22.90
+Suggests:	hyprland-qtutils
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
