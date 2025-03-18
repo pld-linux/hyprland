@@ -1,7 +1,7 @@
 Summary:	Independent, highly customizable, dynamic tiling Wayland compositor
 Name:		hyprland
 Version:	0.47.1
-Release:	1
+Release:	2
 License:	BSD
 Group:		Applications
 #Source0Download: https://github.com/hyprwm/hyprland/releases
