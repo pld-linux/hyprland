@@ -1,12 +1,12 @@
 Summary:	Independent, highly customizable, dynamic tiling Wayland compositor
 Name:		hyprland
-Version:	0.47.1
-Release:	2
+Version:	0.48.0
+Release:	1
 License:	BSD
 Group:		Applications
 #Source0Download: https://github.com/hyprwm/hyprland/releases
 Source0:	https://github.com/hyprwm/hyprland/releases/download/v%{version}/source-v%{version}.tar.gz
-# Source0-md5:	3826e50944a128823005bc2add028e75
+# Source0-md5:	dbac20dce047c3d60449d928d83e378b
 Patch0:		flags.patch
 URL:		https://hyprland.org/
 BuildRequires:	EGL-devel
@@ -17,12 +17,12 @@ BuildRequires:	cairo-devel
 BuildRequires:	cmake >= 3.30
 BuildRequires:	glaze-devel >= 4.2.3
 BuildRequires:	glib2 >= 2.0
-BuildRequires:	hypr-aquamarine-devel >= 0.4.5
+BuildRequires:	hypr-aquamarine-devel >= 0.8.0
 BuildRequires:	hyprcursor-devel >= 0.1.7
 BuildRequires:	hyprgraphics-devel >= 0.1.1
-BuildRequires:	hyprland-protocols >= 0.6.0
+BuildRequires:	hyprland-protocols >= 0.6.2
 BuildRequires:	hyprlang-devel >= 0.3.2
-BuildRequires:	hyprutils-devel >= 0.4.0
+BuildRequires:	hyprutils-devel >= 0.5.1
 BuildRequires:	hyprwayland-scanner >= 0.3.10
 BuildRequires:	libdrm-devel
 BuildRequires:	libinput-devel
@@ -38,17 +38,17 @@ BuildRequires:	re2-devel
 BuildRequires:	rpmbuild(macros) >= 1.605
 BuildRequires:	tomlplusplus-devel
 BuildRequires:	wayland-devel >= 1.22.90
-BuildRequires:	wayland-protocols
+BuildRequires:	wayland-protocols >= 1.41
 BuildRequires:	xcb-util-devel
 BuildRequires:	xcb-util-errors-devel
 BuildRequires:	xcb-util-wm-devel
 BuildRequires:	xorg-lib-libXcursor-devel
 BuildRequires:	xorg-lib-libxkbcommon-devel
-Requires:	hypr-aquamarine >= 0.4.5
+Requires:	hypr-aquamarine >= 0.8.0
 Requires:	hyprcursor >= 0.1.7
 Requires:	hyprgraphics >= 0.1.1
 Requires:	hyprlang >= 0.3.2
-Requires:	hyprutils >= 0.4.0
+Requires:	hyprutils >= 0.5.1
 Requires:	wayland >= 1.22.90
 Suggests:	hyprland-qtutils
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
