@@ -1,12 +1,12 @@
 Summary:	Independent, highly customizable, dynamic tiling Wayland compositor
 Name:		hyprland
-Version:	0.48.0
+Version:	0.48.1
 Release:	1
 License:	BSD
 Group:		Applications
 #Source0Download: https://github.com/hyprwm/hyprland/releases
 Source0:	https://github.com/hyprwm/hyprland/releases/download/v%{version}/source-v%{version}.tar.gz
-# Source0-md5:	dbac20dce047c3d60449d928d83e378b
+# Source0-md5:	ff8df623bbacfcd39bd88da164982f30
 Patch0:		flags.patch
 URL:		https://hyprland.org/
 BuildRequires:	EGL-devel
